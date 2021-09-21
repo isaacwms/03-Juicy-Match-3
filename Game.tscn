@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Grid/grid.gd" type="Script" id=1]
+[ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/HUD.gd" type="Script" id=3]
+
+[node name="Game" type="Node2D"]
+
+[node name="grid" type="Node2D" parent="."]
+script = ExtResource( 1 )
+width = 4
+height = 5
+xStart = 96
+yStart = 832
+offset = 128
+background = ExtResource( 2 )
+
+[node name="HUD" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="HUD"]
+margin_right = 576.0
+margin_bottom = 20.0
+text = "Score: "

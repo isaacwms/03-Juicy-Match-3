@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/Menu.gd" type="Script" id=1]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 566.0
+margin_bottom = 482.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 576.0
+margin_bottom = 512.0
+text = "Welcome to Match-3"
+align = 1
+valign = 1
+
+[node name="Play" type="Button" parent="."]
+margin_left = 238.0
+margin_top = 512.0
+margin_right = 338.0
+margin_bottom = 552.0
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 238.0
+margin_top = 562.0
+margin_right = 338.0
+margin_bottom = 602.0
+text = "Quit"
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
